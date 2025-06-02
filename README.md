@@ -52,7 +52,7 @@ npm install
 Para iniciar el servidor de desarrollo:
 
 ```bash
-npm start
+ionic serve
 ```
 
 La aplicación estará disponible en `http://localhost:8100`
