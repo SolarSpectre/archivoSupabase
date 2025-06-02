@@ -1,4 +1,4 @@
-# Aplicación de Subida de Archivos con Supabase
+# Aplicación de Subida de Archivos con Supabase Joseph Caza
 
 Esta es una aplicación web desarrollada con Angular e Ionic que permite subir y gestionar archivos utilizando Supabase como backend.
 
@@ -28,8 +28,8 @@ Esta es una aplicación web desarrollada con Angular e Ionic que permite subir y
 
 1. Clona el repositorio:
 ```bash
-git clone [URL_DEL_REPOSITORIO]
-cd [NOMBRE_DEL_DIRECTORIO]
+git clone https://github.com/SolarSpectre/archivoSupabase
+cd archivoSupabase
 ```
 
 2. Instala las dependencias:
@@ -45,7 +45,7 @@ npm install
    - Ve al dashboard de Supabase
    - Navega a Storage
    - Crea un nuevo bucket llamado "files"
-   - Configura las políticas de acceso según tus necesidades
+   - Configura las políticas de acceso según tus necesidades: `CREATE POLICY "allow uploads" ON storage.objects FOR INSERT TO public WITH CHECK (bucket_id = 'files');`
 
 ## Ejecución del Proyecto
 
@@ -55,7 +55,7 @@ Para iniciar el servidor de desarrollo:
 npm start
 ```
 
-La aplicación estará disponible en `http://localhost:4200`
+La aplicación estará disponible en `http://localhost:8100`
 
 ## Uso
 
@@ -67,36 +67,6 @@ La aplicación estará disponible en `http://localhost:4200`
 
 ## Capturas de Pantalla
 
-[INSERTAR CAPTURAS DE PANTALLA AQUÍ]
+![Captura de pantalla 2025-06-02 115635](https://github.com/user-attachments/assets/64370999-ae5e-4712-906c-3d8857e3db25)![Captura de pantalla 2025-06-02 120029](https://github.com/user-attachments/assets/479aefff-19db-469a-ae2e-623f6108a749)
 
-## Estructura del Proyecto
-
-```
-src/
-├── app/
-│   ├── home/                 # Componente principal
-│   │   ├── home.page.ts      # Lógica de subida de archivos
-│   │   ├── home.page.html    # Template de la interfaz
-│   │   └── home.page.scss    # Estilos
-│   ├── supabase.client.ts    # Configuración de Supabase
-│   └── ...
-└── ...
-```
-
-## Contribuir
-
-1. Haz fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
-
-## Contacto
-
-[TU_NOMBRE] - [TU_EMAIL]
-
-Link del proyecto: [https://github.com/tu-usuario/tu-repositorio](https://github.com/tu-usuario/tu-repositorio) 
+![Captura de pantalla 2025-06-02 120037](https://github.com/user-attachments/assets/7906b74f-7445-4f2e-84e2-88f81677262f)![Captura de pantalla 2025-06-02 121731](https://github.com/user-attachments/assets/9f32ae41-88c2-47f0-bfa1-c1687bcf644d)
