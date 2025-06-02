@@ -25,3 +25,48 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+ion-item {
+  --background: var(--ion-color-light-shade);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+ion-list {
+  background: transparent;
+  margin-top: 2rem;
+}
+
+ion-item-divider {
+  --background: transparent;
+  --color: var(--ion-color-medium);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+ion-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+}
+
+ion-text p {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+ion-button[fill="clear"] {
+  --color: var(--ion-color-primary);
+}
+
+ion-icon {
+  font-size: 1.5rem;
+}

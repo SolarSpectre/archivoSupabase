@@ -1,20 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Subida de archivos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label position="stacked">Seleciona un Archivo</ion-label>
+      <input type="file" (change)="onFileSelected($event)" accept="*/*">
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button expand="block" (click)="uploadFile()" [disabled]="!selectedFile" class="ion-margin-top">
+      Sube un archivo
+    </ion-button>
+
+    <ion-text color="medium" class="ion-margin-top">
+      <p>{{ uploadStatus }}</p>
+    </ion-text>
+
+    <div *ngIf="uploadProgress > 0" class="ion-margin-top">
+      <ion-progress-bar [value]="uploadProgress / 100"></ion-progress-bar>
+    </div>
+
+    <ion-list class="ion-margin-top">
+      <ion-item-divider>
+        <ion-label>Archivos subidos</ion-label>
+      </ion-item-divider>
+      
+      <ion-item *ngFor="let file of uploadedFiles">
+        <ion-label>
+          <h2>{{ file.name }}</h2>
+          <p>{{ file.url }}</p>
+        </ion-label>
+        <ion-button slot="end" fill="clear" (click)="window.open(file.url, '_blank')">
+          <ion-icon name="open-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
